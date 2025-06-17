@@ -1,4 +1,5 @@
 from pathlib import Path
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -12,6 +13,8 @@ SECRET_KEY = 'django-insecure-b^04g$mv=n$*4l98$usa9hjk$9+0dis=8zw5o+5!&8o)&*u6e#
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+AUTH_USER_MODEL = 'inventory.Player'
 
 ALLOWED_HOSTS = ['*', 'localhost', '127.0.0.1',]
 
@@ -175,3 +178,4 @@ if not DEBUG:
     SECURE_BROWSER_XSS_FILTER = True # cross-site scripting se protection
     SECURE_CONTENT_TYPE_NOSNIFF = True  # sniffing protection
     X_FRAME_OPTIONS = 'DENY' # clickjacking protection
+    

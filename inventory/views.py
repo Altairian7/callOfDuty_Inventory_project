@@ -13,6 +13,8 @@ from .serializers import (
     UserRegistrationSerializer, LoginSerializer
 )
 
+from .tasks import send_welcome_email
+
 
 # for player registration
 

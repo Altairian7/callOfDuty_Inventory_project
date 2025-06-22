@@ -23,7 +23,7 @@ class WeaponListView(generics.ListCreateAPIView):
 
 @api_view(['POST'])
 @permission_classes([permissions.AllowAny])
-def register_user(request):
+def register_player(request):
     
     serializer = UserRegisterSerializer(data=request.data)
     if serializer.is_valid():
